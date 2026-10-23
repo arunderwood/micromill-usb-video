@@ -1,0 +1,81 @@
+NOTICE — Legal, interoperability, and clean-room statement
+==========================================================
+
+What this project is
+--------------------
+This project is an independent, clean-room reimplementation of a documented
+software interface (ABI): the entry points that the MicroMill application and
+the Imagenation PXC200 family of SDKs expose to one another. It was created for
+the sole purpose of INTEROPERABILITY — letting the existing MicroMill
+application continue to function by sourcing video from a standard, off-the-
+shelf USB video-capture device instead of obsolete PCI frame-grabber hardware
+that no longer has a working driver on modern Windows.
+
+It is an aftermarket compatibility layer, not a competing product, and it adds
+no feature of the original beyond what is needed to keep the application
+running.
+
+What this project contains
+--------------------------
+This repository contains ONLY original source code written from scratch by the
+project author(s). Every file here was authored independently.
+
+What this project does NOT contain
+----------------------------------
+This repository contains NO code, binaries, object files, libraries, headers,
+resources, decompiler output, or disassembly listings from, and no part of, any
+of the following or their products:
+  - Imagenation
+  - CyberOptics Corporation
+  - NWR-ESI / New Wave Research / Electro Scientific Industries (ESI)
+  - the MicroMill application
+  - any PXC200 / PXC2 / Frame / PXC200_Support SDK, driver, or runtime
+
+It does NOT redistribute, and you must NOT add to it, any of the original
+proprietary DLLs (e.g. Pxc2_nt.dll, Frame_32.dll, PXC200_Support.dll, pxc.sys),
+the vendor SDK or its headers, or any MicroMill program files. Those remain the
+property of their respective owners and are not licensed here.
+
+The only information this project relies upon about the original software is the
+interface contract needed to interoperate with it: function names, call
+conventions, argument/return sizes, and structure layouts — i.e. the facts that
+constitute the published ABI. Interface information of this kind is the
+necessary subject of interoperability, and this project reproduces no
+expressive, copyrightable implementation of the original software.
+
+Reverse engineering for interoperability
+-----------------------------------------
+To the extent any analysis of the original software was performed, it was done
+solely to identify the interface elements required to achieve interoperability
+of an independently created program with other programs, which is expressly
+permitted under 17 U.S.C. § 1201(f) (the interoperability exemption to the DMCA
+anti-circumvention provisions) and is consistent with the long-recognized
+treatment of such activity under United States copyright law (see, e.g., Sega
+Enterprises Ltd. v. Accolade, Inc., 977 F.2d 1510 (9th Cir. 1992); Sony
+Computer Entertainment, Inc. v. Connectix Corp., 203 F.3d 596 (9th Cir. 2000)).
+Nothing here circumvents any technological protection measure, and no such
+measure was circumvented in creating it.
+
+Trademarks
+----------
+"MicroMill", "Imagenation", "PXC200", "CyberOptics", "NWR-ESI", "New Wave
+Research", "ESI", and all other product and company names mentioned are the
+trademarks or registered trademarks of their respective owners. They are used
+here only nominatively, to identify the software with which this project
+interoperates. Their use does NOT imply any affiliation with, sponsorship by,
+or endorsement by any of those owners. This project is not affiliated with,
+authorized by, or endorsed by any of them.
+
+No warranty; use at your own risk
+---------------------------------
+This software is provided "AS IS", without warranty of any kind, express or
+implied (see LICENSE). It controls or interoperates with laboratory/industrial
+equipment (a microscope mill). You are solely responsible for operating your
+equipment safely and for any consequences of using this software.
+
+Your licenses are your responsibility
+-------------------------------------
+You are responsible for ensuring that you hold all necessary licenses to any
+third-party software with which you choose to use this project — including the
+MicroMill application and any vendor SDK or runtime — and for complying with
+their terms. This project grants no rights in any third-party software.

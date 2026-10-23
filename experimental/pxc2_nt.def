@@ -1,0 +1,8 @@
+EXPORTS
+; Only these two are fetched by name (imagenation_OpenLibrary -> GetProcAddress
+; "OpenLibrary"; CloseLibrary at shutdown). MicroMill/PXC200_Support bind every
+; other PXC function through the vtable OpenLibrary installs, so they need no
+; named export. MSVC strips the stdcall decoration and exports _OpenLibrary@8
+; as "OpenLibrary" and _CloseLibrary@4 as "CloseLibrary".
+  OpenLibrary
+  CloseLibrary

@@ -1,0 +1,21 @@
+LIBRARY PXC200_Support
+EXPORTS
+; MicroMill.exe GetProcAddress's these by name; export undecorated (MSVC strips
+; the __stdcall decoration when the plain name is listed here).
+  PXC_InitializeFG
+  PXC_InitializeDD
+  PXC_InitializeBuffers
+  PXC_GetFrameWidth
+  PXC_GetFrameHeight
+  PXC_GetErrorCode
+  PXC_VideoPresent
+  PXC_StartGrab
+  PXC_StopGrab
+  PXC_DoGrab
+  PXC_GetOverlayDC
+  PXC_ReleaseOverlayDC
+  PXC_SetParameter
+  PXC_SaveSingleFrame
+  PXC_SaveCaptureBuffer
+  PXC_GrabSingleFrame
+  PXC_Shutdown

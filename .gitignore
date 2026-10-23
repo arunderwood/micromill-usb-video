@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Build outputs
+# ---------------------------------------------------------------------------
+build/
+**/build/
+*.obj
+*.exp
+*.lib
+*.ilk
+*.pdb
+*.idb
+*.exe
+*.dll
+
+# Local, user-specific config (keep only pxcshim.ini.sample in the repo)
+pxcshim.ini
+
+# ---------------------------------------------------------------------------
+# NEVER commit third-party / proprietary material.
+# These patterns are a safety net so vendor binaries, SDKs, and any
+# reverse-engineering artifacts cannot be added by accident. This project is
+# clean-room and must contain only original source (see NOTICE).
+# ---------------------------------------------------------------------------
+# Original vendor / application binaries
+Pxc2_nt.dll
+pxc2_nt.dll
+Frame_32.dll
+frame_32.dll
+PXC200_Support.dll
+pxc.sys
+*.pxc-backup
+MicroMill*
+MicroMill.exe
+
+# Vendor SDK / headers (interface reference material, not redistributable)
+references/
+**/imagenation-sdk/
+PXC.H
+PXC.h
+pxc.h
+frame.h
+iframe.h
+VIDEO_32.H
+PXCDD.H
+*.BAS
+
+# Reverse-engineering artifacts (derivative works of proprietary binaries)
+ghidra*/
+*.gpr
+*.rep
+*.asm
+*.lst
+*.decomp.txt
+*.disasm
+originals/
+reverse-engineering/
+
+# ---------------------------------------------------------------------------
+# Editor / OS noise
+# ---------------------------------------------------------------------------
+.vs/
+*.user
+*.suo
+Thumbs.db
+desktop.ini
+.DS_Store

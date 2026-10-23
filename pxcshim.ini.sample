@@ -1,0 +1,39 @@
+; pxcshim.ini - optional configuration for the MicroMill USB video shim.
+;
+; Copy this file to "pxcshim.ini" and place it in the SAME folder as the shim
+; DLL (the MicroMill program folder, next to the installed PXC200_Support.dll).
+; If the file is absent, the defaults below are used, which suit MicroMill plus
+; a standard NTSC S-Video dongle.
+
+[device]
+; Which capture device to use.
+;   index = -1        -> first available video-capture device (default)
+;   index = 0,1,2...  -> pick by enumeration order
+index=-1
+; Optional: match a device by a substring of its friendly name (case-insensitive).
+; If set (non-empty), this overrides index. Example: name=USB Video
+name=
+
+[video]
+; Analog TV standard the dongle's decoder should use.
+;   NTSC (default; MicroMill is NTSC-only), PAL, or AUTO (let the device decide)
+standard=NTSC
+; Capture/output size requested from the device (Media Foundation scales to it).
+; 640x480 matches MicroMill's typical frame; 720x480 is full NTSC active area.
+width=640
+height=480
+; Max value of MicroMill's picture-control sliders, used to scale a slider value
+; onto the camera's brightness/contrast/hue/saturation range (IAMVideoProcAmp).
+; Default 255. Set to match your MicroMill build's slider range if controls feel
+; too coarse or too sensitive.
+slider_max=255
+; Write RGB32 into sub-32-bit frame buffers (1=on, default). Leave on unless you
+; have a specific reason to change it.
+promote_y8=1
+; Paint a diagnostic gradient/grid instead of live video (1=on). For debugging
+; the display path only; keep 0 for normal use.
+test_pattern=0
+
+[log]
+; Optional diagnostic log. Empty = off. Example: file=C:\Temp\pxcshim.log
+file=
