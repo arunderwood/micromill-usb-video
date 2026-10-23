@@ -1,5 +1,7 @@
 # micromill-usb-video
 
+[![CI](https://github.com/arunderwood/micromill-usb-video/actions/workflows/ci.yml/badge.svg)](https://github.com/arunderwood/micromill-usb-video/actions/workflows/ci.yml)
+
 Bring live video back to the **New Wave Research MicroMill** (originally
 Merchantek) using a standard USB / S-Video capture device — no PCI frame grabber,
 no kernel driver, no driver signing, and **no changes to the MicroMill
